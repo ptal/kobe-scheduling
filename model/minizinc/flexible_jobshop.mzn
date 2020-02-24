@@ -165,11 +165,14 @@ constraint
 
 ann: s_mindur   = int_search(dur, smallest, indomain_min, complete);
 ann: s_minstart = int_search(start, smallest, indomain_min, complete);
-ann: s_bool     = bool_search(b, smallest, indomain_min, complete);
+ann: s_bool     = bool_search(b, input_order, indomain_max, complete);
 ann: s_obj      = int_search([objective], input_order, indomain_min, complete);
 
-% Duration -> mode -> starting date -> objective
 ann: dms = seq_search([s_mindur, s_bool, s_minstart, s_obj]);
+
+ann: dwd = seq_search([
+    int_search(dur ++ start ++ b, dom_w_deg, indomain_min, complete),
+    int_search([objective], dom_w_deg, indomain_min, complete)]);
 
 %-----------------------------------------------------------------------------%
 % Output
