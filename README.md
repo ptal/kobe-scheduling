@@ -1,7 +1,7 @@
 # Data sets for scheduling problems
 
 This repository contains data sets and constraint models for the resource-constrained project scheduling problem (RCPSP) and some variants.
-Check out the [benchmarking book](https://ptal.github.io/benchmarking.html) to benchmark on these data sets.
+Check out the [https://ptal.github.io/benchmarking.html](https://ptal.github.io/absolute/benchmarking.html) to benchmark on these data sets.
 
 ## Models
 
